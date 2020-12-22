@@ -38,7 +38,8 @@ int main()
     SET_PROFILER_REPORT_PATH("c:\\temp\\profile.csv");
     otherFunction();
     complexFunction();
-    return 0; // profiler will now dump its results to the log file and standard out
+    return 0;
+    // profiler will now dump its results to the log file and standard out
     }
 
 void otherFunction()
