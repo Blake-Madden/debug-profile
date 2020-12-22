@@ -23,18 +23,19 @@ Profiling information will be written to standard output and a specified file (`
 
 ## Building
 
-Include the files `debug_profile.cpp` and `debug_profile.h` in your project and use the macros as shown in the [example](#example).
+Include the files `debug_profile.cpp` and `debug_profile.h` in your project and use the macros as shown in the example.
 
 ## Building the Help
 
 For full documentation, open the file `Doxyfile` in [Doxygen](https://github.com/doxygen/doxygen) and run it.
 
-## Example {#example}
+## Example
 
 ```cpp
 int main()
     {
-    SET_PROFILER_REPORT_PATH("c:\\temp\\profile.csv"); // optionally write to log file
+    // optionally write to log file
+    SET_PROFILER_REPORT_PATH("c:\\temp\\profile.csv");
     otherFunction();
     complexFunction();
     return 0; // profiler will now dump its results to the log file and standard out
