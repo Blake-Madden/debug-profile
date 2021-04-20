@@ -1,3 +1,10 @@
+/***************************************************************************
+copyright (c) 2007-2020 Oleander Software, Ltd.
+author: Blake Madden
+This program is free software; you can redistribute it and/or modify
+it under the terms of the BSD License.
+****************************************************************************/
+
 #include "debug_profile.h"
 
 #ifdef ENABLE_PROFILING
@@ -76,11 +83,6 @@ namespace __debug
 
         if (m_profiles.size())
             {
-            const auto lastSlash = m_outputPath.find_last_of("/\\");
-            std::string folderPath;
-            if (lastSlash != -1)
-                { folderPath = m_outputPath.substr(0, lastSlash+1); }
-
             std::chrono::nanoseconds totalTime{0};
             for (const auto& pos : m_profiles)
                 { totalTime += pos.m_total_duration_time; }

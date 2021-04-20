@@ -192,7 +192,7 @@ namespace __debug
     class __profiler
         {
     public:
-        __profiler(const char* name);
+        explicit __profiler(const char* name);
         __profiler(const char* name, const char* extra_info);
         __profiler(const __profiler& that) = delete;
         __profiler(__profiler&& that) = delete;
